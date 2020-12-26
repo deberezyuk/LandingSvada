@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <style media="screen">
+    body {
+      font-family: 'Halvar Breit CY Lt';
+      background-color: #FCF3E9;
+      margin: auto 50px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+    button {
+      background-color: black;
+      border: none;
+      border-radius: 100px;
+      /* border: 1px solid #1482d0; */
+      width: auto;
+      height: 50px;
+      color: white;
+      padding: 4px 15px;
+      font-family: 'Spectral';
+      letter-spacing: 2px;
+      font-size: 20px;
+      font-weight: 50;
+      text-align: center;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+    .menubar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 auto 8px auto;
+      background: #FCF3E9;
+      border-bottom: 1px solid #aaa;
+      /* box-shadow: 0 5px 7px 2px rgba(0, 0, 0, .1); */
+    }
+    .main-page {
+      display: flex;
+      justify-content: space-between;
+    }
+    .main-page-text {
+      font-size: 30px;
+      margin-top: 230px;
+    }
+    .main-page-button {
+      margin-top: 150px;
+    }
+    .main-page-photo {
+      margin-top: 30px;
+      height: auto;
+      width: auto;
+    }
+    .page-title {
+      display: block;
+      margin: 100px auto 48px auto;
+      font-size: 60px;
+    }
+    .page-description {
+      display: flex;
+      justify-content: space-between;
+    }
+    .page-description a {
+      color: #94927F;
+      margin-bottom: auto;
+    }
+    .wedding-page-description {
+      font-size: 30px;
+      margin: 0 0;
+      margin-bottom: auto;
+    }
+    .wedding-examples {
+      display: flex;
+      justify-content: space-between;
+      margin: 100px auto 0 auto;
+    }
+    .wedding-price {
+      width: 100px;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      /* border: 1px solid black; */
+      border-radius: 100px;
+      background-color: #FCF3E9;
+      margin-top: -55px;
+      margin-left: 13px;
+      font-family: 'Spectral';
+      font-size: 16px;
+      text-align: center;
+    }
+    .wedding-name {
+      margin: 5px 0;
+    }
+    .svada-about-page {
+      display: flex;
+      justify-content: space-between;
+    }
+    .svada-about-page-left {
+      display: block;
+      height: 446px;
+    }
+    .svada-about-page-right {
+      display: block;
+      margin: 363px auto auto auto;
+    }
+    .
+    .svada-about-items {
+      display: flex;
+      height: 290px;
+      width: 550px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .svada-about-item {
+      display: block;
+      height: 123px;
+      width: 550px;
+    }
+    .instruction-elem {
+      display: block;
+      width: 1350px;
+      height: 455px;
+      margin: 145px auto auto -50px;
+      background-color: #DCB994;
+    }
+    .instruction-elem img {
+      display: inline-block;
+      margin: 20px;
+    }
+    .instruction-items {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 50px auto;
+    }
+    .instruction-item {
+      display: table-cell; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
+      vertical-align: middle;
+      position: relative;
+    }
+    .instruction-item p {
+      text-align: center;
+    }
+    .instruction-item-number {
+      font-size: 160px;
+      color: #FCF3E9;
+      margin: 0 auto;
+    }
+    .instruction-item-text {
+      font-size: 28px;
+      color: #FCF3E9;
+      position: relative;
+      margin: 10px auto;
+      display: inline-block;
+    }
+    /* .instruction-item-separator-first {
+      display: inline;
+      border-left: .5px solid #FCF3E9;
+      height: 177px;
+    } */
+    .click-action-after-instruction {
+      display: table-cell; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
+      vertical-align: middle;
+      position: absolute;
+      margin: 120px auto auto auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .click-action-after-instruction-text {
+      display: block;
+      font-size: 28px;
+      text-align: center;
+    }
+    .click-action-after-instruction-button {
+      margin-left: calc(0px + 16%);
+      position: relative;
+    }
+  </style>
+  <body>
+
+    <div class="menubar">
+      <a href="index.html">
+        <div class="svada-logo">
+          <img src="images/logo.png" alt="Svada-Logo">
+        </div>
+      </a>
+      <a href="#s1">свадьбы</a>
+      <a href="#s2">исполнители</a>
+      <a href="#s1">площадки</a>
+    </div>
+
+    <section class="main-page">
+      <div class="main-page-left">
+        <p class="main-page-text">Создавай свадьбу мечты<br>просто и быстро</p>
+        <button class="main-page-button" type="button" name="button">Хочу свадьбу мечты</button>
+      </div>
+      <div class="main-page-right">
+        <img class="main-page-photo"src="images/main-page.png" alt="Wedding Invitation">
+      </div>
+    </section>
+
+    <section class="wedding-page" id="s1">
+      <p class="page-title">Свадьбы</p>
+      <div class="page-description">
+        <p class="wedding-page-description">Множество стилей под любой бюджет</p>
+        <a href="index.html">смотреть все</a>
+      </div>
+      <div class="wedding-examples">
+        <div class="wedding-example">
+          <div class="wedding-photo-price">
+            <img src="images/wedding-photo-iceland.png" alt="Wedding in Iceland">
+            <div class="wedding-price">
+              <span>400 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">Свадьба в Исландии</p>
+        </div>
+        <div class="wedding-example">
+          <div class="wedding-photo-price">
+            <img src="images/wedding-photo-botanic.png" alt="Wedding Botanic">
+            <div class="wedding-price">
+              <span>200 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">Эко-свадьба</p>
+        </div>
+        <div class="wedding-example">
+          <div class="wedding-photo-price">
+            <img src="images/wedding-photo-boho.png" alt="Wedding Boho">
+            <div class="wedding-price">
+              <span>300 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">Свадьба Бохо</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="svada-about-page" id="">
+      <div class="svada-about-page-left">
+        <p class="page-title" id="page-title-about">О проекте</p>
+        <div class="svada-about-items">
+          <p class="svada-about-item">Поможем сделать осознанный выбор в организации свальбы в атмосфере спокойствия и легкости</p>
+          <p class="svada-about-item">Широкий выбор свадеб и площадок для планирования свадьбы мечты</p>
+          <p class="svada-about-item">Совмещаем традиции прошлого и веяния современности, олицетворяя равновесие и равенство</p>
+        </div>
+      </div>
+      <div class="svada-about-page-right">
+        <img src="images/svada-icon-big.png" alt="Svada-Logo">
+      </div>
+    </section>
+
+    <section class="instruction-page">
+      <div class="instruction-elem">
+      <div class="instruction-item-separator-first"></div>
+      <div class="instruction-item-separator-second"></div>
+        <img src="images/svada-icon-little.png" alt="svada-icon">
+        <div class="instruction-items">
+          <div class="instruction-item">
+            <p class="instruction-item-number">1</p>
+            <p class="instruction-item-text">Выбирай</p>
+          </div>
+          <div class="instruction-item">
+            <p class="instruction-item-number">2</p>
+            <p class="instruction-item-text">Кастомизируй или</br>доверяй</p>
+          </div>
+          <div class="instruction-item">
+            <p class="instruction-item-number">3</p>
+            <p class="instruction-item-text">Ожидай или</br>действуй сам</p>
+          </div>
+         </div>
+      </div>
+      <div class="click-action-after-instruction">
+        <p class="click-action-after-instruction-text">Создавай счастливые</br>моменты</p>
+        <button class="click-action-after-instruction-button" type="button" name="button">Хочу свадьбу мечты</button>
+      </div>
+    </section>
+
+  </body>
+</html>
