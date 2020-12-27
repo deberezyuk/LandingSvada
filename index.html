@@ -3,7 +3,8 @@
 
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Svada-Landing</title>
   </head>
 
   <style media="screen">
@@ -85,7 +86,7 @@
     .wedding-examples {
       display: flex;
       justify-content: space-between;
-      margin: 100px auto 0 auto;
+      margin: 45px auto 0 auto;
     }
     .wedding-price {
       width: 100px;
@@ -189,6 +190,87 @@
       margin-left: calc(0px + 16%);
       position: relative;
     }
+    .page-title-platform {
+      display: block;
+      margin: 330px auto 48px auto;
+      font-size: 60px;
+    }
+    .platform-examples {
+      display: flex;
+      justify-content: space-between;
+      margin: 45px auto 0 auto;
+    }
+    .platform-photo-price img {
+      width: 600px;
+    }
+    .platform-price {
+      width: 100px;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      /* border: 1px solid black; */
+      border-radius: 100px;
+      background-color: #FCF3E9;
+      margin-top: -55px;
+      margin-left: 13px;
+      font-family: 'Spectral';
+      font-size: 16px;
+      text-align: center;
+    }
+    .platform-name {
+      margin: 5px 0;
+    }
+    .page-title-performers {
+      display: block;
+      margin: 108px auto 48px auto;
+      font-size: 60px;
+    }
+    .performers {
+      display: flex;
+      justify-content: space-between;
+    }
+    .performer-card-photo-name {
+      display: block;
+      text-align: center;
+    }
+    .performer-card-name-profession {
+      font-size: 18px;
+    }
+    .performer-card-name {
+      margin: 18px auto auto auto;
+    }
+    .performer-card-profession {
+      margin: 12px auto auto auto;
+      text-decoration: underline;
+    }
+    .performer-card-stars {
+      display: flex;
+      width: 111px;
+      height: auto;
+      justify-content: space-between;
+      margin: 15px 80px;
+    }
+    .checked {
+      color: orange;
+    }
+    .performer-card-info {
+      display: flex;
+      justify-content: space-between;
+      width: 152px;
+      height: 60px;
+      margin: 14px 60px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .performer-card-info-projects {
+      margin-right: 40px;
+    }
+    .performer-card-info-reviews-text, .performer-card-info-projects-text {
+      font-family: 'Spectral';
+      color: #747474;
+    }
   </style>
   <body>
 
@@ -200,7 +282,8 @@
       </a>
       <a href="#s1">свадьбы</a>
       <a href="#s2">исполнители</a>
-      <a href="#s1">площадки</a>
+      <a href="#s3">площадки</a>
+      <a href="#s4">о проекте</a>
     </div>
 
     <section class="main-page">
@@ -291,5 +374,162 @@
       </div>
     </section>
 
+    <section class="platform-page" id="s3">
+      <p class="page-title-platform">Площадки</p>
+      <div class="page-description">
+        <p class="wedding-page-description">Локации и площадки по всему миру</p>
+        <a href="index.html">смотреть все</a>
+      </div>
+      <div class="platform-examples">
+        <div class="platform-example">
+          <div class="platform-photo-price">
+            <img src="images/platform-urban-photo.png" alt="urban platform">
+            <div class="platform-price">
+              <span>от 100 000₽</span>
+            </div>
+          </div>
+          <p class="platform-name">Лофт лощадка</p>
+        </div>
+        <div class="platform-example">
+          <div class="platform-photo-price">
+            <img src="images/platform-green-photo.png" alt="green platform">
+            <div class="platform-price">
+              <span>от 200 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">В замке графа</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="performers-page" id="s2">
+      <p class="page-title-performers">Исполнители</p>
+      <div class="page-description">
+        <p class="wedding-page-description">Профессионалы с опытом во всех стилях</p>
+        <a href="index.html">смотреть все</a>
+      </div>
+      <div class="performers">
+        <div class="performer-card">
+          <div class="performer-card-photo-name">
+            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <div class="performer-card-name-profession">
+                <p class="performer-card-name">Илья Ильин</p>
+                <p class="performer-card-profession">фотограф</p>
+            </div>
+          </div>
+          <div class="performer-card-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="performer-card-info">
+            <div class="performer-card-info-projects">
+              <p class="performer-card-info-projects-number">13</p>
+              <p class="performer-card-info-projects-text">проектов</p>
+            </div>
+            <div class="performer-card-info-reviews">
+              <p class="performer-card-info-reviews-number">25</p>
+              <p class="performer-card-info-reviews-text">отзывов</p>
+            </div>
+          </div>
+          <blockquote cite="http://">
+            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
+          </blockquote>
+        </div>
+
+        <div class="performer-card">
+          <div class="performer-card-photo-name">
+            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <div class="performer-card-name-profession">
+                <p class="performer-card-name">Илья Ильин</p>
+                <p class="performer-card-profession">фотограф</p>
+            </div>
+          </div>
+          <div class="performer-card-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="performer-card-info">
+            <div class="performer-card-info-projects">
+              <p class="performer-card-info-projects-number">13</p>
+              <p class="performer-card-info-projects-text">проектов</p>
+            </div>
+            <div class="performer-card-info-reviews">
+              <p class="performer-card-info-reviews-number">25</p>
+              <p class="performer-card-info-reviews-text">отзывов</p>
+            </div>
+          </div>
+          <blockquote cite="http://">
+            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
+          </blockquote>
+        </div>
+
+        <div class="performer-card">
+          <div class="performer-card-photo-name">
+            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <div class="performer-card-name-profession">
+                <p class="performer-card-name">Илья Ильин</p>
+                <p class="performer-card-profession">фотограф</p>
+            </div>
+          </div>
+          <div class="performer-card-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="performer-card-info">
+            <div class="performer-card-info-projects">
+              <p class="performer-card-info-projects-number">13</p>
+              <p class="performer-card-info-projects-text">проектов</p>
+            </div>
+            <div class="performer-card-info-reviews">
+              <p class="performer-card-info-reviews-number">25</p>
+              <p class="performer-card-info-reviews-text">отзывов</p>
+            </div>
+          </div>
+          <blockquote cite="http://">
+            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
+          </blockquote>
+        </div>
+
+        <div class="performer-card">
+          <div class="performer-card-photo-name">
+            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <div class="performer-card-name-profession">
+                <p class="performer-card-name">Илья Ильин</p>
+                <p class="performer-card-profession">фотограф</p>
+            </div>
+          </div>
+          <div class="performer-card-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="performer-card-info">
+            <div class="performer-card-info-projects">
+              <p class="performer-card-info-projects-number">13</p>
+              <p class="performer-card-info-projects-text">проектов</p>
+            </div>
+            <div class="performer-card-info-reviews">
+              <p class="performer-card-info-reviews-number">25</p>
+              <p class="performer-card-info-reviews-text">отзывов</p>
+            </div>
+          </div>
+          <blockquote cite="http://">
+            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
+          </blockquote>
+        </div>
+        
+      </div>
+    </section>
   </body>
 </html>
