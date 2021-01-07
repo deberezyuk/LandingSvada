@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Svada-Landing</title>
+    <script type="text/javascript">
+
+    </script>
   </head>
 
   <style media="screen">
@@ -18,12 +21,12 @@
       color: black;
       font-size: 20px;
     }
-    button {
+    /* button {
       background-color: black;
       border: none;
       border-radius: 100px;
       /* border: 1px solid #1482d0; */
-      width: auto;
+      /* width: auto;
       height: 50px;
       color: white;
       padding: 4px 15px;
@@ -38,6 +41,74 @@
       background-color: white;
       color: black;
       border: 1px solid black;
+    } */
+    .button-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: #FFE8A3; */
+    }
+    button {
+      border: 1px solid transparent;
+      background: black;
+      color: white;
+      border-radius: 40px;
+      padding: 15px 30px;
+      overflow: hidden;
+      width: 277px;
+      transition:
+        all 1.2s,
+        border 0.5s 1.2s,
+        box-shadow 0.3s 1.5s;
+      white-space: nowrap;
+      text-indent: 23px;
+      font-weight: normal;
+      font-family: 'Spectral';
+      font-size: 20px;
+    }
+    button span {
+      display: inline-block;
+      transform: translateX(400px);
+      font-weight: normal;
+      opacity: 0;
+      transition:
+        opacity 0.1s 0.5s,
+        transform 0.4s 0.5s;
+    }
+    button:hover {
+      text-indent: 0;
+      background: white;
+      color: black;
+      width: 400px;
+      border: 2px solid black;
+      box-shadow: 3px 3px 2px rgba(black, 0.15);
+    }
+    button:hover span {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    input {
+        height: 14px;
+        /* width: 478px; */
+        padding: 16px;
+        font-size: 18px;
+        border-radius: 0px;
+        border: 1px solid #d6d6d6;
+        margin-bottom: 14px;
+        font-family: 'Halvar Breit CY Lt';
+        background: rgba(148, 146, 127, 0.3);
+        color: #747474;
+    }
+    input[type=text], input[type=email], input[type=password], input[type=tel] {
+        width: 615px;
+        display: block;
+        margin: 0 auto 14px auto;
+    }
+    input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=tel]:focus, select:focus {
+        outline: none;
+        border-color: rgba(61, 70, 39, 0.3);
+        /* box-shadow: 0 0 3px 1px rgba(66, 161, 236, 0.5); */
+        box-shadow: 0 0 3px 1px rgba(61, 70, 39, 0.3);
     }
     .menubar {
       display: flex;
@@ -49,6 +120,17 @@
       border-bottom: 1px solid #aaa;
       /* box-shadow: 0 5px 7px 2px rgba(0, 0, 0, .1); */
     }
+     .footer {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-end;
+       height: 30px;
+       padding: 0 auto 8px auto;
+       background: #FCF3E9;
+       margin-top: 50px;
+       margin-bottom: 20px;
+       /* border-bottom: 1px solid #aaa; */
+     }
     .main-page {
       display: flex;
       justify-content: space-between;
@@ -57,18 +139,27 @@
       font-size: 30px;
       margin-top: 230px;
     }
+    .main-page-text-info {
+      font-size: 18px;
+      font-family: 'Spectral';
+      width: 600px;
+    }
     .main-page-button {
-      margin-top: 150px;
+      margin-top: 30px;
     }
     .main-page-photo {
+      background-image: url('images/main-page.png');
       margin-top: 30px;
-      height: auto;
-      width: auto;
+      height: 587px;
+      width: 516px;
     }
     .page-title {
       display: block;
       margin: 100px auto 48px auto;
       font-size: 60px;
+    }
+    .watch-all {
+      line-height: 35px;
     }
     .page-description {
       display: flex;
@@ -96,16 +187,24 @@
       box-sizing: border-box;
       position: absolute;
       /* border: 1px solid black; */
-      border-radius: 100px;
-      background-color: #FCF3E9;
+      border-radius: 20px;
+      background-color: black;
       margin-top: -55px;
       margin-left: 13px;
       font-family: 'Spectral';
       font-size: 16px;
       text-align: center;
     }
+    .wedding-price-rub {
+      font-size: 16px;
+      color: #FCF3E9;
+      font-weight: 200;
+      font-family: 'Spectral';
+    }
     .wedding-name {
       margin: 5px 0;
+      font-family: 'Spectral';
+      font-size: 20px;
     }
     .svada-about-page {
       display: flex;
@@ -119,7 +218,6 @@
       display: block;
       margin: 363px auto auto auto;
     }
-    .
     .svada-about-items {
       display: flex;
       height: 290px;
@@ -145,16 +243,26 @@
     }
     .instruction-items {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin: 50px 50px auto;
     }
     .instruction-item {
-      display: table-cell; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
+      display: inline-block; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
       vertical-align: middle;
       position: relative;
+      /* width: 25%; */
+      text-align: center;
     }
     .instruction-item p {
       text-align: center;
+      width: 100%;
+    }
+    .instruction-vertical-line {
+      height: 200px;
+      width: .5px;
+      background: white;
+      display: inline-block;
+      position: relative;
     }
     .instruction-item-number {
       font-size: 160px;
@@ -180,6 +288,14 @@
       margin: 120px auto auto auto;
       left: 50%;
       transform: translate(-50%, -50%);
+      background-image: url('images/Flowers-Photo-Test.png');
+      width: 500px;
+      height: 500px;
+    }
+    .click-action-after-instruction-background {
+      /* background-image: url('images/Flowers-Photo.png');
+      width: 1152px;
+      height: 318px; */
     }
     .click-action-after-instruction-text {
       display: block;
@@ -187,9 +303,148 @@
       text-align: center;
     }
     .click-action-after-instruction-button {
-      margin-left: calc(0px + 16%);
+      /* margin-left: calc(0px + 16%); */
       position: relative;
     }
+    .box {
+      width: 230px;
+      height: 230px;
+      background-color: #F4F4F4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
+
+      .plant-box {
+      width: 180px;
+      height: 35px;
+      background-color: #D0E4E5;
+      border: 3px solid #555869;
+      border-radius: 5px;
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      }
+
+      .plant-box::before, .plant-box::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 3px;
+      }
+      .plant-box::before {
+        background-color: #C3E5D0;
+        top: -6px;
+        border-radius: 5px 5px 0 0;
+        opacity: 0.9;
+      }
+       .plant-box::after {
+        background-color: #E0E0E0;
+        bottom: -6px;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .flower {
+      width: 20px;
+      height: 32px;
+      border: 3px solid #555869;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+      .flower::after,
+      .flower::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 26px;
+        border: 3px solid #555869;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .flower::after {
+        left: -10px;
+        bottom: -4px;
+        transform: rotate(-25deg);
+        animation: flower-left 1s infinite linear;
+      }
+
+      .flower::before {
+        right: -10px;
+        bottom: -4px;
+        transform: rotate(25deg);
+        animation: flower-right 1s infinite linear;
+      }
+
+      .-flower1 {
+        background-color: #F7D2C9;
+        left: 50px;
+        top: 70px;
+      }
+
+      .-flower2 {
+        background-color: #87BDC1;
+        top: 80px;
+        left: 100px;
+      }
+
+      .-flower3 {
+        background-color: #D8778A;
+        top: 55px;
+        left: 150px;
+      }
+
+      .plant {
+      width: 3px;
+      height: 75px;
+      background-color: #555869;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+      .plant::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 7px;
+        border: 3px solid #555869;
+        border-radius: 50%;
+        top: 20px;
+        animation: plant 2s infinite linear;
+      }
+
+      @keyframes flower-left {
+      0% {transform: rotate(-25deg) }
+      50% {transform: rotate(-30deg) scale(0.95)}
+      100% { transform: rotate(-25deg)}
+      }
+
+      @keyframes flower-right {
+      0% {transform: rotate(25deg) }
+      50% {transform: rotate(30deg) scale(0.95)}
+      100% { transform: rotate(25deg)}
+      }
+
+      @keyframes plant {
+      0% { transform: rotate(0) }
+      25% {
+        transform: rotate(8deg);
+        transform-origin: left;
+      }
+      50% { transform: rotate(0)}
+      75% {
+        transform: rotate(-8deg);
+        transform-origin: left;
+      }
+      100% {transform: rotate(0)}
+      }
     .page-title-platform {
       display: block;
       margin: 330px auto 48px auto;
@@ -204,7 +459,7 @@
       width: 600px;
     }
     .platform-price {
-      width: 100px;
+      width: 120px;
       padding: 10px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -212,7 +467,8 @@
       position: absolute;
       /* border: 1px solid black; */
       border-radius: 100px;
-      background-color: #FCF3E9;
+      background-color: black;
+      color: white;
       margin-top: -55px;
       margin-left: 13px;
       font-family: 'Spectral';
@@ -227,30 +483,42 @@
       margin: 108px auto 48px auto;
       font-size: 60px;
     }
+    .performer-card {
+      text-align: center;
+    }
     .performers {
       display: flex;
       justify-content: space-between;
+      margin-top: 46px;
     }
     .performer-card-photo-name {
       display: block;
       text-align: center;
     }
+    .performer-card-photo {
+      width: 144px;
+      height: 146px;
+      border-radius: 100%
+    }
     .performer-card-name-profession {
       font-size: 18px;
     }
     .performer-card-name {
-      margin: 18px auto auto auto;
+      margin: 8px auto auto auto;
     }
     .performer-card-profession {
-      margin: 12px auto auto auto;
-      text-decoration: underline;
+      margin: 8px auto auto auto;
+      /* text-decoration: underline; */
+      font-family: 'Spectral';
+      font-weight: bolder;
+      font-size: 20px;
     }
     .performer-card-stars {
       display: flex;
       width: 111px;
       height: auto;
       justify-content: space-between;
-      margin: 15px 80px;
+      margin: 10px 100px;
     }
     .checked {
       color: orange;
@@ -260,7 +528,7 @@
       justify-content: space-between;
       width: 152px;
       height: 60px;
-      margin: 14px 60px;
+      margin: 30px 57px;
       text-align: center;
       font-size: 14px;
     }
@@ -269,8 +537,171 @@
     }
     .performer-card-info-reviews-text, .performer-card-info-projects-text {
       font-family: 'Spectral';
+      font-size: 20px;
+      font-weight: 200;
+      /* letter-spacing: 2px; */
       color: #747474;
     }
+    .performer-card-citate {
+      padding-top: 30px;
+    }
+    .stories-line {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 105px;
+      margin-right: 105px;
+      margin-top: 120px;
+      align-items: center
+    }
+    .stories-left-arrow {
+      width: 0;
+      height: 0;
+      border-top: 27px solid transparent;
+      border-bottom: 27px solid transparent;
+      border-right: 54px solid #94927F;
+    }
+    .stories-right-arrow {
+      width: 0;
+      height: 0;
+      border-top: 27px solid transparent;
+      border-bottom: 27px solid transparent;
+      border-left: 54px solid #94927F;
+    }
+    .stories-right-arrow:hover {
+      border-top: 27px solid transparent;
+      border-bottom: 27px solid transparent;
+      border-left: 54px solid #DCB994;
+      transition: 1s all;
+    }
+    .stories-left-arrow:hover {
+      border-top: 27px solid transparent;
+      border-bottom: 27px solid transparent;
+      border-right: 54px solid #DCB994;
+      transition: 1s all;
+    }
+    .stories-photo {
+      background-image: url("images/storie-photo-first.png");
+      background-size: cover;
+      width: 540px;
+      height: 425px;
+    }
+    .stories-text {
+      width: 510px;
+      font-family: 'Spectral';
+      font-size: 20px;
+      margin: 30px 30px;
+    }
+    .stories-no {
+      text-align: center;
+      font-family: 'Spectral';
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .last-page-window {
+      display: flex;
+      justify-content: space-around;
+    }
+    .last-page-right-side {
+      width: 615px;
+    }
+    .last-page-photo {
+      background-image: url("images/last-page-photo.png");
+      background-size: cover;
+      height: 659px;
+      width: 600px;
+    }
+    .last-page-title {
+      display: block;
+      margin: 35px auto;
+      font-size: 60px;
+    }
+    .last-page-user-text {
+      font-family: 'Spectral';
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .form-name-surname {
+        display: flex;
+        justify-content: space-between;
+        width: 649px;
+    }
+    .form-name-surname input {
+        display: inline-block;
+        width: calc(50% - 4px);
+        margin: 0 0 14px;
+        width: 260px;
+    }
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: rgba(148, 146, 127, 0.3);
+        border: .5px solid black;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: white;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: rgba(61, 70, 39, 0.3);
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .last-page-button {
+        background: #3D4627;
+        text-indent: 30px;
+      }
   </style>
   <body>
 
@@ -289,10 +720,16 @@
     <section class="main-page">
       <div class="main-page-left">
         <p class="main-page-text">Создавай свадьбу мечты<br>просто и быстро</p>
-        <button class="main-page-button" type="button" name="button">Хочу свадьбу мечты</button>
+        <p class="main-page-text-info">Сотни собранных свадеб всевозможных стилей, различные локации по всему миру, лучшие исполнителями помогут спланировать свадьбу
+в атмосфере спокойствия и равновесия.</p>
+        <div class="button-div">
+          <button class="main-page-button" type="button" name="button">Хочу свадьбу мечты <span>прямо сейчас</span></button>
+        </div>
       </div>
       <div class="main-page-right">
-        <img class="main-page-photo"src="images/main-page.png" alt="Wedding Invitation">
+        <!-- сделать background в виде img + использовать padding соотношени сторон  -->
+        <div class="main-page-photo"></div>
+        <!-- <img class="main-page-photo"src="images/main-page.png" alt="Wedding Invitation"> -->
       </div>
     </section>
 
@@ -300,14 +737,14 @@
       <p class="page-title">Свадьбы</p>
       <div class="page-description">
         <p class="wedding-page-description">Множество стилей под любой бюджет</p>
-        <a href="index.html">смотреть все</a>
+        <a class="watch-all" href="index.html">смотреть все</a>
       </div>
       <div class="wedding-examples">
         <div class="wedding-example">
           <div class="wedding-photo-price">
             <img src="images/wedding-photo-iceland.png" alt="Wedding in Iceland">
             <div class="wedding-price">
-              <span>400 000₽</span>
+              <span class="wedding-price-rub">400 000₽</span>
             </div>
           </div>
           <p class="wedding-name">Свадьба в Исландии</p>
@@ -316,7 +753,7 @@
           <div class="wedding-photo-price">
             <img src="images/wedding-photo-botanic.png" alt="Wedding Botanic">
             <div class="wedding-price">
-              <span>200 000₽</span>
+              <span class="wedding-price-rub">200 000₽</span>
             </div>
           </div>
           <p class="wedding-name">Эко-свадьба</p>
@@ -325,7 +762,7 @@
           <div class="wedding-photo-price">
             <img src="images/wedding-photo-boho.png" alt="Wedding Boho">
             <div class="wedding-price">
-              <span>300 000₽</span>
+              <span class="wedding-price-rub">300 000₽</span>
             </div>
           </div>
           <p class="wedding-name">Свадьба Бохо</p>
@@ -358,19 +795,39 @@
             <p class="instruction-item-number">1</p>
             <p class="instruction-item-text">Выбирай</p>
           </div>
+          <div class="instruction-vertical-line"></div>
           <div class="instruction-item">
             <p class="instruction-item-number">2</p>
-            <p class="instruction-item-text">Кастомизируй или</br>доверяй</p>
+            <p class="instruction-item-text">Кастомизируй</br> или доверяй</p>
           </div>
+          <div class="instruction-vertical-line"></div>
           <div class="instruction-item">
             <p class="instruction-item-number">3</p>
-            <p class="instruction-item-text">Ожидай или</br>действуй сам</p>
+            <p class="instruction-item-text">Ожидай </br>или действуй сам</p>
           </div>
          </div>
       </div>
       <div class="click-action-after-instruction">
+        <div class="click-action-after-instruction-background"></div>
         <p class="click-action-after-instruction-text">Создавай счастливые</br>моменты</p>
-        <button class="click-action-after-instruction-button" type="button" name="button">Хочу свадьбу мечты</button>
+        <div class="button-div">
+          <button class="click-action-after-instruction-button" type="button" name="button">Хочу свадьбу мечты <span> через месяц</span></button>
+        </div>
+      </div>
+      <!-- <div class="box">
+        <div class="plant-box"></div>
+
+        <div class="flower -flower1">
+          <div class="plant"></div>
+        </div>
+
+        <div class="flower -flower2">
+          <div class="plant"></div>
+        </div> -->
+
+        <!-- <div class="flower -flower3">
+          <div class="plant"></div>
+        </div> -->
       </div>
     </section>
 
@@ -385,7 +842,7 @@
           <div class="platform-photo-price">
             <img src="images/platform-urban-photo.png" alt="urban platform">
             <div class="platform-price">
-              <span>от 100 000₽</span>
+              <span class="wedding-price-rub">от 100 000₽</span>
             </div>
           </div>
           <p class="platform-name">Лофт лощадка</p>
@@ -394,7 +851,7 @@
           <div class="platform-photo-price">
             <img src="images/platform-green-photo.png" alt="green platform">
             <div class="platform-price">
-              <span>от 200 000₽</span>
+              <span class="wedding-price-rub">от 200 000₽</span>
             </div>
           </div>
           <p class="wedding-name">В замке графа</p>
@@ -434,17 +891,43 @@
               <p class="performer-card-info-reviews-text">отзывов</p>
             </div>
           </div>
-          <blockquote cite="http://">
-            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
-          </blockquote>
+            <p class="performer-card-citate">фотография для меня</br>как смысл жизни</p>
         </div>
 
         <div class="performer-card">
           <div class="performer-card-photo-name">
-            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <img class="performer-card-photo" src="images/Performer-Florist.png" alt="performer-photo">
             <div class="performer-card-name-profession">
-                <p class="performer-card-name">Илья Ильин</p>
-                <p class="performer-card-profession">фотограф</p>
+                <p class="performer-card-name">Мария Маркина</p>
+                <p class="performer-card-profession">флорист</p>
+            </div>
+          </div>
+          <div class="performer-card-stars">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <div class="performer-card-info">
+            <div class="performer-card-info-projects">
+              <p class="performer-card-info-projects-number">15</p>
+              <p class="performer-card-info-projects-text">проектов</p>
+            </div>
+            <div class="performer-card-info-reviews">
+              <p class="performer-card-info-reviews-number">13</p>
+              <p class="performer-card-info-reviews-text">отзывов</p>
+            </div>
+          </div>
+            <p class="performer-card-citate">Цветы способны сделать</br>сказку</p>
+        </div>
+
+        <div class="performer-card">
+          <div class="performer-card-photo-name">
+            <img class="performer-card-photo" src="images/Performer-Organizer.png" alt="performer-photo">
+            <div class="performer-card-name-profession">
+                <p class="performer-card-name">Наталья Букина</p>
+                <p class="performer-card-profession">организатор</p>
             </div>
           </div>
           <div class="performer-card-stars">
@@ -456,25 +939,23 @@
           </div>
           <div class="performer-card-info">
             <div class="performer-card-info-projects">
-              <p class="performer-card-info-projects-number">13</p>
+              <p class="performer-card-info-projects-number">9</p>
               <p class="performer-card-info-projects-text">проектов</p>
             </div>
             <div class="performer-card-info-reviews">
-              <p class="performer-card-info-reviews-number">25</p>
+              <p class="performer-card-info-reviews-number">45</p>
               <p class="performer-card-info-reviews-text">отзывов</p>
             </div>
           </div>
-          <blockquote cite="http://">
-            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
-          </blockquote>
+            <p class="performer-card-citate">организовывать все звенья </br>цепочки воедино — мой талант</p>
         </div>
 
         <div class="performer-card">
           <div class="performer-card-photo-name">
-            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
+            <img class="performer-card-photo" src="images/Performer-Lead.png" alt="performer-photo">
             <div class="performer-card-name-profession">
-                <p class="performer-card-name">Илья Ильин</p>
-                <p class="performer-card-profession">фотограф</p>
+                <p class="performer-card-name">Иван Иванов</p>
+                <p class="performer-card-profession">ведущий</p>
             </div>
           </div>
           <div class="performer-card-stars">
@@ -482,7 +963,7 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
+            <span class="fa fa-star checked"></span>
           </div>
           <div class="performer-card-info">
             <div class="performer-card-info-projects">
@@ -494,42 +975,59 @@
               <p class="performer-card-info-reviews-text">отзывов</p>
             </div>
           </div>
-          <blockquote cite="http://">
-            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
-          </blockquote>
+            <p class="performer-card-citate">непринужденная и теплая обстановка</br>на свадьбе — мой конек</p>
         </div>
-
-        <div class="performer-card">
-          <div class="performer-card-photo-name">
-            <img class="performer-card-photo" src="images/Performer-Face.png" alt="performer-photo">
-            <div class="performer-card-name-profession">
-                <p class="performer-card-name">Илья Ильин</p>
-                <p class="performer-card-profession">фотограф</p>
-            </div>
-          </div>
-          <div class="performer-card-stars">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </div>
-          <div class="performer-card-info">
-            <div class="performer-card-info-projects">
-              <p class="performer-card-info-projects-number">13</p>
-              <p class="performer-card-info-projects-text">проектов</p>
-            </div>
-            <div class="performer-card-info-reviews">
-              <p class="performer-card-info-reviews-number">25</p>
-              <p class="performer-card-info-reviews-text">отзывов</p>
-            </div>
-          </div>
-          <blockquote cite="http://">
-            <p class="performer-card-citate"><q>фотография для меня</br>как смысл жизни</q></p>
-          </blockquote>
-        </div>
-        
       </div>
     </section>
+
+    <section class="svada-stories">
+      <div class="stories-line">
+        <div class="stories-left-arrow"></div>
+        <div class="stories-photo-text">
+          <div class="stories-photo"></div>
+          <p class="stories-text">Как я организовала свадьбу за 2 вечера, сэкономив при этом 100 000 ₽ на услугах свадебных агенств</p>
+        </div>
+        <div class="stories-right-arrow"></div>
+      </div>
+      <p class="stories-no">1</p>
+    </section>
+
+    <section class="last-page">
+      <div class="last-page-window">
+        <div class="last-page-photo"></div>
+        <div class="last-page-right-side">
+          <p class="last-page-title">Зарегистирируйся</p>
+          <p class="last-page-user-text">вдохновляйся собранными свадьбами, общайся с исполнителями или молодожеными, делись находками с друзьями а соц. сетях или просто наслаждайся красотой свадеб со всего мира</p>
+          <div class="last-page-user-form">
+            <div class="form-name-surname">
+              <input type="text" name="" value="" placeholder="фамилия">
+              <input type="text" name="" value="" placeholder="имя">
+            </div>
+            <input type="text" name="" value="" placeholder="город">
+            <input type="email" name="" value="" placeholder="электронная почта">
+            <input type="password" name="" value="" placeholder="пароль">
+            <input type="password" name="" value="" placeholder="подтвердите пароль">
+            <label class="container">Являюсь исполнителем
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <div class="button-div">
+              <button class="last-page-button" type="button" name="button">Зарегистрируйся <span>прямо сейчас</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <a href="index.html">
+        <div class="svada-logo">
+          <img src="images/logo.png" alt="Svada-Logo">
+        </div>
+      </a>
+      <a href="">подписаться</a>
+      <a href="">политики</a>
+      <a href="">о нас</a>
+    </div>
   </body>
 </html>
