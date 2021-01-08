@@ -11,6 +11,9 @@
   </head>
 
   <style media="screen">
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Halvar Breit CY Lt';
       background-color: #FCF3E9;
@@ -207,28 +210,63 @@
       font-size: 20px;
     }
     .svada-about-page {
-      display: flex;
-      justify-content: space-between;
+      margin-top: 100px;
+      height: 684px;
     }
-    .svada-about-page-left {
-      display: block;
+    .svada-about-page-background {
+      background-image: url('images/Flowers-Photo-Background-Project.png');
+      background-color: rgba(237, 212, 187, 0.5);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 700px;
+      width: 1350px;
+      margin-left: -50px;
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+    }
+    /* .svada-about-page-left {
+      display: absolute;
       height: 446px;
-    }
-    .svada-about-page-right {
-      display: block;
+      z-index: 2;
+    } */
+    /* .svada-about-page-right {
+      display: absolute;
       margin: 363px auto auto auto;
-    }
-    .svada-about-items {
+      z-index: 2;
+    } */
+    /* .svada-about-items {
       display: flex;
       height: 290px;
       width: 550px;
       flex-direction: column;
       justify-content: space-between;
+    } */
+    .svada-about-page-text {
+      position: relative;
+      /* left: 30%; */
+      transform: translate(0%, -110%);
+      z-index: 2;
+    }
+    .svada-about-page-title {
+      display: block;
+      margin: 100px auto 48px 0%;
+      font-size: 60px;
+      z-index: 2;
     }
     .svada-about-item {
       display: block;
       height: 123px;
-      width: 550px;
+      /* width: 550px;
+      z-index: 2; */
+      /* top: 50%;
+      left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      z-index: 2;
+      width: 80%;
+      font-family: 'Spectral';
+      font-size: 20px;
+      width: 530px;
     }
     .instruction-elem {
       display: block;
@@ -244,7 +282,7 @@
     .instruction-items {
       display: flex;
       justify-content: space-around;
-      margin: 50px 50px auto;
+      margin: 10px 50px auto;
     }
     .instruction-item {
       display: inline-block; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
@@ -282,29 +320,57 @@
       height: 177px;
     } */
     .click-action-after-instruction {
-      display: table-cell; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
-      vertical-align: middle;
-      position: absolute;
-      margin: 120px auto auto auto;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url('images/Flowers-Photo-Test.png');
-      width: 500px;
-      height: 500px;
+      display: block; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
+      /* vertical-align: middle; */
+      /* position: absolute; */
+      margin: -28px auto auto -50px;
+      /* left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      /* background: url('images/Flowers-Photo-Background2.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: blur(8px);
+      -webkit-filter: blur(8px); */
+      width: 1350px;
+      height: 320px;
     }
     .click-action-after-instruction-background {
-      /* background-image: url('images/Flowers-Photo.png');
-      width: 1152px;
-      height: 318px; */
+      display: block; /* Added rule - Note: IE8+, Firefox, Chrome, Opera, Safari */
+      /* vertical-align: middle; */
+      /* position: absolute; */
+      margin: 20px auto auto 0px;
+      /* left: 50%; */
+      /* transform: translate(-50%, -50%); */
+      background: url('images/Flowers-Photo-Background2.png');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: blur(8px);
+      -webkit-filter: blur(3px);
+      width: 1350px;
+      height: 320px;
     }
     .click-action-after-instruction-text {
-      display: block;
+      display: absolute;
       font-size: 28px;
       text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      margin-left: 50%;
+      margin-top: -15%;
+
     }
     .click-action-after-instruction-button {
       /* margin-left: calc(0px + 16%); */
       position: relative;
+      /* top: 50%;
+      left: 50%; */
+      transform: translate(0%, -50%);
+      z-index: 2;
+      text-align: center;
     }
     .box {
       width: 230px;
@@ -447,7 +513,7 @@
       }
     .page-title-platform {
       display: block;
-      margin: 330px auto 48px auto;
+      margin: 100px auto 48px auto;
       font-size: 60px;
     }
     .platform-examples {
@@ -771,8 +837,17 @@
     </section>
 
 
-    <section class="svada-about-page" id="">
-      <div class="svada-about-page-left">
+    <section class="svada-about-page" id="s4">
+      <div class="svada-about-page-background"></div>
+      <div class="svada-about-page-text">
+        <p class="svada-about-page-title" id="page-title-about">О проекте</p>
+        <p class="svada-about-item">Поможем сделать осознанный выбор в организации свальбы в атмосфере спокойствия и легкости</p>
+        <p class="svada-about-item">Наша миссия – совмещая традиции прошлого и современные тренды, помочь каждому создать свадьбу мечты в атмосфере спокойствия и гармонии</p>
+        <p class="svada-about-item">Позволим организовать мероприятие или найти интересный для себя проект, потратив меньше времени и денег, чем требуется обычно</p>
+        <p class="svada-about-item">Предоставляем широкий выбор исполнителей, необычных площадок, проектов для вашего вдохновения</p>
+      </div>
+
+      <!-- <div class="svada-about-page-left">
         <p class="page-title" id="page-title-about">О проекте</p>
         <div class="svada-about-items">
           <p class="svada-about-item">Поможем сделать осознанный выбор в организации свальбы в атмосфере спокойствия и легкости</p>
@@ -782,6 +857,34 @@
       </div>
       <div class="svada-about-page-right">
         <img src="images/svada-icon-big.png" alt="Svada-Logo">
+      </div> -->
+    </section>
+
+    <section class="platform-page" id="s3">
+      <p class="page-title-platform">Площадки</p>
+      <div class="page-description">
+        <p class="wedding-page-description">Локации и площадки по всему миру</p>
+        <a href="index.html">смотреть все</a>
+      </div>
+      <div class="platform-examples">
+        <div class="platform-example">
+          <div class="platform-photo-price">
+            <img src="images/platform-urban-photo.png" alt="urban platform">
+            <div class="platform-price">
+              <span class="wedding-price-rub">от 100 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">Лофт лощадка</p>
+        </div>
+        <div class="platform-example">
+          <div class="platform-photo-price">
+            <img src="images/platform-green-photo.png" alt="green platform">
+            <div class="platform-price">
+              <span class="wedding-price-rub">от 200 000₽</span>
+            </div>
+          </div>
+          <p class="wedding-name">В замке графа</p>
+        </div>
       </div>
     </section>
 
@@ -828,34 +931,6 @@
         <!-- <div class="flower -flower3">
           <div class="plant"></div>
         </div> -->
-      </div>
-    </section>
-
-    <section class="platform-page" id="s3">
-      <p class="page-title-platform">Площадки</p>
-      <div class="page-description">
-        <p class="wedding-page-description">Локации и площадки по всему миру</p>
-        <a href="index.html">смотреть все</a>
-      </div>
-      <div class="platform-examples">
-        <div class="platform-example">
-          <div class="platform-photo-price">
-            <img src="images/platform-urban-photo.png" alt="urban platform">
-            <div class="platform-price">
-              <span class="wedding-price-rub">от 100 000₽</span>
-            </div>
-          </div>
-          <p class="platform-name">Лофт лощадка</p>
-        </div>
-        <div class="platform-example">
-          <div class="platform-photo-price">
-            <img src="images/platform-green-photo.png" alt="green platform">
-            <div class="platform-price">
-              <span class="wedding-price-rub">от 200 000₽</span>
-            </div>
-          </div>
-          <p class="wedding-name">В замке графа</p>
-        </div>
       </div>
     </section>
 
